@@ -34,8 +34,12 @@
   <section class="hero" aria-label="Hero">
     <img
       src="images/hero-paintings.jpg"
+      srcset="images/hero-paintings@400w.jpg 400w,
+              images/hero-paintings@800w.jpg 800w,
+              images/hero-paintings.jpg 1600w"
+      sizes="100vw"
       alt="All of Your Colours and Joyspace (1) by Mousumi Saha"
-      width="1600" height="900"
+      width="1600" height="1066"
       fetchpriority="high"
     />
   </section>
@@ -52,8 +56,12 @@
       <div>
         <img
           src="images/collector-paintings.jpg"
+          srcset="images/collector-paintings@400w.jpg 400w,
+                  images/collector-paintings@800w.jpg 800w,
+                  images/collector-paintings.jpg 900w"
+          sizes="(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px"
           alt="All of Your Colours and Joyspace (1)"
-          width="600" height="800"
+          width="900" height="1200"
           loading="lazy"
           style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top"
         />
@@ -61,8 +69,12 @@
         <div style="height:2rem"></div>
         <img
           src="images/collector-karen-lee.jpg"
+          srcset="images/collector-karen-lee@400w.jpg 400w,
+                  images/collector-karen-lee@800w.jpg 800w,
+                  images/collector-karen-lee.jpg 900w"
+          sizes="(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px"
           alt="Karen Lee at home with the paintings"
-          width="600" height="800"
+          width="900" height="1200"
           loading="lazy"
           style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%"
         />
@@ -94,8 +106,11 @@
       <div>
         <img
           src="images/artist-mousumi-saha.jpg"
+          srcset="images/artist-mousumi-saha@400w.jpg 400w,
+                  images/artist-mousumi-saha.jpg 800w"
+          sizes="(max-width:760px) 100vw, (max-width:1200px) 43vw, 515px"
           alt="Mousumi Saha"
-          width="600" height="800"
+          width="800" height="1044"
           loading="lazy"
           style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top"
         />
@@ -118,22 +133,39 @@
   <section id="exhibition" aria-labelledby="exhibition-heading">
     <div class="rule"><span id="exhibition-heading">The exhibition</span></div>
     <div class="full-bleed">
-      <img src="images/exhibition-gallery-window.jpg" alt="VFD Outsiders Gallery window" width="1600" height="900" loading="lazy"/>
+      <img
+        src="images/exhibition-gallery-window.jpg"
+        srcset="images/exhibition-gallery-window@400w.jpg 400w,
+                images/exhibition-gallery-window@800w.jpg 800w,
+                images/exhibition-gallery-window.jpg 1000w"
+        sizes="100vw"
+        alt="VFD Outsiders Gallery window"
+        width="1000" height="562"
+        loading="lazy"
+      />
     </div>
     <div style="height:2px"></div>
     <div class="two-col exhibition-pair">
       <img
         src="images/exhibition-opening-night.jpg"
+        srcset="images/exhibition-opening-night@400w.jpg 400w,
+                images/exhibition-opening-night@800w.jpg 800w,
+                images/exhibition-opening-night.jpg 900w"
+        sizes="(max-width:700px) 100vw, 50vw"
         alt="Opening night, VFD Outsiders"
-        width="800" height="1000"
+        width="900" height="1200"
         loading="lazy"
         style="aspect-ratio:4/5;object-fit:cover"
       />
       <img
         class="installation-central"
         src="images/exhibition-installation.png"
+        srcset="images/exhibition-installation@400w.png 400w,
+                images/exhibition-installation@800w.png 800w,
+                images/exhibition-installation.png 1010w"
+        sizes="(max-width:700px) 100vw, 50vw"
         alt="Installation view, VFD Outsiders"
-        width="800" height="1000"
+        width="1010" height="670"
         loading="lazy"
       />
     </div>
@@ -155,13 +187,26 @@
   <section id="studio" aria-labelledby="studio-heading">
     <div class="rule"><span id="studio-heading">Studio</span></div>
     <div class="full-bleed">
-      <img src="images/studio-paintings.jpg" alt="Paintings in the studio" width="1600" height="900" loading="lazy"/>
+      <img
+        src="images/studio-paintings.jpg"
+        srcset="images/studio-paintings@400w.jpg 400w,
+                images/studio-paintings@800w.jpg 800w,
+                images/studio-paintings.jpg 900w"
+        sizes="100vw"
+        alt="Paintings in the studio"
+        width="900" height="506"
+        loading="lazy"
+      />
     </div>
     <div style="height:2px"></div>
     <img
       src="images/studio-work-in-progress.jpg"
+      srcset="images/studio-work-in-progress@400w.jpg 400w,
+              images/studio-work-in-progress@800w.jpg 800w,
+              images/studio-work-in-progress.jpg 900w"
+      sizes="100vw"
       alt="Work in progress"
-      width="1600" height="900"
+      width="900" height="506"
       loading="lazy"
       style="width:100%;height:60vh;object-fit:cover"
     />
@@ -170,9 +215,33 @@
     <div class="rule"><span>Sketchbook &amp; studies</span></div>
     <div style="padding-bottom:5rem">
       <div class="sketch-grid">
-        <img src="images/sketch-pencil-study.jpg" alt="Pencil study" width="600" height="800" loading="lazy"/>
-        <img src="images/sketch-oil-study.jpg" alt="Oil study" width="600" height="800" loading="lazy"/>
-        <img src="images/sketch-rose-study.jpg" alt="Rose study" width="600" height="800" loading="lazy"/>
+        <img
+          src="images/sketch-pencil-study.jpg"
+          srcset="images/sketch-pencil-study@400w.jpg 400w,
+                  images/sketch-pencil-study.jpg 800w"
+          sizes="(max-width:760px) 100vw, 33vw"
+          alt="Pencil study"
+          width="800" height="563"
+          loading="lazy"
+        />
+        <img
+          src="images/sketch-oil-study.jpg"
+          srcset="images/sketch-oil-study@400w.jpg 400w,
+                  images/sketch-oil-study.jpg 700w"
+          sizes="(max-width:760px) 100vw, 33vw"
+          alt="Oil study"
+          width="700" height="1243"
+          loading="lazy"
+        />
+        <img
+          src="images/sketch-rose-study.jpg"
+          srcset="images/sketch-rose-study@400w.jpg 400w,
+                  images/sketch-rose-study.jpg 700w"
+          sizes="(max-width:760px) 100vw, 33vw"
+          alt="Rose study"
+          width="700" height="1192"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -189,8 +258,27 @@
 
         <article class="print-section" aria-label="Joyspace (1)">
           <div class="shop-images">
-            <img src="images/print-joyspace-1.jpg" alt="Joyspace (1) print" width="600" height="750" loading="lazy"/>
-            <img src="images/print-joyspace-1-scale.jpg" alt="Joyspace (1) shown at scale" class="scale" width="600" height="750" loading="lazy"/>
+            <img
+              src="images/print-joyspace-1.jpg"
+              srcset="images/print-joyspace-1@400w.jpg 400w,
+                      images/print-joyspace-1@800w.jpg 800w,
+                      images/print-joyspace-1.jpg 900w"
+              sizes="(max-width:760px) 100vw, (max-width:900px) 50vw, 450px"
+              alt="Joyspace (1) print"
+              width="900" height="1119"
+              loading="lazy"
+            />
+            <img
+              src="images/print-joyspace-1-scale.jpg"
+              srcset="images/print-joyspace-1-scale@400w.jpg 400w,
+                      images/print-joyspace-1-scale@800w.jpg 800w,
+                      images/print-joyspace-1-scale.jpg 900w"
+              sizes="(max-width:760px) 100vw, (max-width:900px) 50vw, 450px"
+              alt="Joyspace (1) shown at scale"
+              class="scale"
+              width="900" height="674"
+              loading="lazy"
+            />
           </div>
           <p class="scale-note">Edition printed at bespoke size (762 × 948 mm) — differs from original artwork shown in collector's home</p>
           <div class="shop-details single-print">
@@ -227,8 +315,27 @@
 
         <article class="print-section" aria-label="All of your colours">
           <div class="shop-images">
-            <img src="images/print-all-colours.jpg" alt="All of your colours print" width="600" height="750" loading="lazy"/>
-            <img src="images/print-all-colours-scale.png" alt="All of your colours shown at scale" class="scale" width="600" height="750" loading="lazy"/>
+            <img
+              src="images/print-all-colours.jpg"
+              srcset="images/print-all-colours@400w.jpg 400w,
+                      images/print-all-colours@800w.jpg 800w,
+                      images/print-all-colours.jpg 1637w"
+              sizes="(max-width:760px) 100vw, (max-width:900px) 50vw, 450px"
+              alt="All of your colours print"
+              width="1637" height="2048"
+              loading="lazy"
+            />
+            <img
+              src="images/print-all-colours-scale.png"
+              srcset="images/print-all-colours-scale@400w.png 400w,
+                      images/print-all-colours-scale@800w.png 800w,
+                      images/print-all-colours-scale.png 1186w"
+              sizes="(max-width:760px) 100vw, (max-width:900px) 50vw, 450px"
+              alt="All of your colours shown at scale"
+              class="scale"
+              width="1186" height="894"
+              loading="lazy"
+            />
           </div>
           <p class="scale-note">Edition printed at bespoke size (762 × 953 mm) — differs from original artwork shown in collector's home</p>
           <div class="shop-details single-print">
