@@ -1,0 +1,142 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a18;--paper:#faf8f4;--muted:#888;--rule:#d8d4cc;--warm:#f5f2eb}
+body{font-family:'DM Mono',monospace;background:var(--paper);color:var(--ink);font-size:12px;line-height:1.6}
+img{display:block;width:100%}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2rem;transition:background .3s,backdrop-filter .3s}
+header.scrolled{background:rgba(250,248,244,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:.5px solid var(--rule)}
+.nav-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:.85rem;white-space:nowrap;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:2rem;align-items:center}
+nav a{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;position:relative;padding-bottom:2px}
+nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:.5px;background:var(--ink);transform:scaleX(0);transition:transform .2s}
+nav a[aria-current="true"]::after,nav a:hover::after{transform:scaleX(1)}
+nav a.cta{border:.5px solid var(--ink);padding:.4rem .9rem}
+nav a.cta::after{display:none}
+.cart-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:.5px solid var(--ink);background:transparent;padding:.4rem .9rem;cursor:pointer;white-space:nowrap}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:.5px;background:var(--ink);transition:transform .25s,opacity .25s}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* MOBILE NAV */
+@media(max-width:700px){
+  nav{display:none;position:fixed;inset:0;top:0;background:var(--paper);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;z-index:99}
+  nav.open{display:flex}
+  nav a{font-size:10px;letter-spacing:.2em}
+  nav a.cta{padding:.6rem 1.4rem}
+  .hamburger{display:flex;z-index:101}
+  .cart-btn{display:none}
+}
+
+/* HERO */
+.hero{width:100%;height:100vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center center}
+
+/* INTRO */
+.intro{max-width:680px;margin:0 auto;padding:5rem 2.5rem;text-align:center}
+.intro p{font-size:15px;line-height:1.9;color:var(--ink)}
+
+/* SECTION RULE */
+.rule{display:flex;align-items:center;gap:1rem;padding:0 2.5rem;margin:5rem 0 3.5rem}
+.rule::before,.rule::after{content:'';flex:1;height:.5px;background:var(--rule)}
+.rule span{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+/* COLLECTOR */
+.collector{display:grid;grid-template-columns:1.2fr .8fr;max-width:1200px;margin:0 auto;padding:0 2.5rem 5rem;gap:4rem;align-items:start}
+.c-tag{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
+.c-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;margin-bottom:2.5rem}
+.c-prose{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;line-height:1.9;margin-bottom:1.5rem}
+.c-prose-attr{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2rem}
+.qa{margin-bottom:2rem;padding-bottom:2rem;border-bottom:.5px solid var(--rule)}
+.qa:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.q{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.a{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;line-height:1.85}
+
+/* FULL BLEED */
+.full-bleed{width:100%;overflow:hidden}
+.full-bleed img{width:100%;height:80vh;object-fit:cover}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.two-col img{width:100%;aspect-ratio:4/5;object-fit:contain;background:var(--paper)}
+
+/* EXHIBITION IMAGE PAIR */
+.exhibition-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;overflow:hidden;background:var(--paper)}
+.exhibition-pair img{width:100%;height:75vh;min-height:520px;max-height:760px;aspect-ratio:auto;object-fit:cover;display:block}
+.exhibition-pair img.installation-central{object-fit:cover;object-position:center center}
+.exh{position:relative;z-index:1;background:var(--paper)}
+@media(max-width:700px){.exhibition-pair{grid-template-columns:1fr}.exhibition-pair img{height:auto;min-height:0;max-height:none;aspect-ratio:auto}}
+
+/* ASYMMETRIC */
+.asym{display:grid;grid-template-columns:3fr 2fr;gap:2px;max-height:70vh}
+.asym img{width:100%;height:100%;object-fit:cover}
+
+/* SKETCH GRID */
+.sketch-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px}
+.sketch-grid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* ARTIST */
+.artist{display:grid;grid-template-columns:.9fr 1.1fr;max-width:1200px;margin:0 auto;padding:5rem 2.5rem;gap:4rem;align-items:start}
+.artist-text h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:2rem}
+.artist-text p{font-size:12px;line-height:1.95;color:var(--muted);margin-bottom:1.1rem}
+.artist-text p:last-child{margin-bottom:0}
+.collector img,.artist img{width:100%;height:100%;object-fit:cover}
+.collector>div:first-child,.artist>div:first-child{margin-top:1.5rem}
+
+/* EXHIBITION TEXT */
+.exh{max-width:760px;margin:0 auto;padding:0 2.5rem 6rem}
+.exh p{font-size:13px;line-height:2;color:var(--ink);margin-bottom:1.5rem}
+.exh blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;line-height:1.8;margin:3rem 0;padding-left:2rem;border-left:.5px solid var(--rule)}
+.exh blockquote cite{display:block;font-family:'DM Mono',monospace;font-style:normal;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.75rem}
+
+/* SHOP */
+.shop{background:var(--warm);padding:5rem 2.5rem}
+.shop-inner{max-width:900px;margin:0 auto}
+.series-intro{max-width:640px;margin:0 auto 4rem;text-align:center}
+.series-intro h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;margin-bottom:.75rem}
+.series-intro p{font-size:11px;line-height:1.9;color:var(--muted)}
+.scale-note{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;margin:1rem 0 3rem;text-align:center}
+.shop-images{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:4rem}
+.shop-images img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.shop-images img.scale{aspect-ratio:unset}
+.shop-details{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.print-card{background:var(--paper);padding:2rem;border:.5px solid var(--rule)}
+.s-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:.35rem}
+.s-ed{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.s-price{font-family:'Playfair Display',serif;font-size:1.65rem;margin-bottom:.75rem}
+.purchase-option{padding:1.5rem 0;border-top:.5px solid var(--rule)}
+.purchase-option:last-of-type{padding-bottom:.5rem}
+.s-add{width:100%;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:none;padding:1rem;cursor:pointer;margin-top:1rem}
+.thin{border:none;border-top:.5px solid var(--rule);margin-bottom:1.5rem}
+.mrow{display:flex;justify-content:space-between;font-size:10px;margin-bottom:.5rem;gap:1rem}
+.mrow span:first-child{color:var(--muted);flex-shrink:0}
+.mrow span:last-child{color:var(--ink);text-align:right}
+.s-note{font-size:9px;line-height:1.8;color:var(--muted);margin-top:1.5rem}
+
+.small-cap{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.75rem}
+footer{border-top:.5px solid var(--rule);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
+.f-l,.f-r{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.f-r{text-align:right}
+.f-c{font-family:'Playfair Display',serif;font-style:italic;font-size:.85rem}
+
+.print-section{margin-bottom:5rem}
+.print-section:last-child{margin-bottom:0}
+.print-section + .print-section{padding-top:5rem;border-top:.5px solid var(--rule)}
+.shop-details.single-print{grid-template-columns:minmax(0,1fr);max-width:520px;margin:0 auto}
+
+@media(max-width:760px){
+  .collector,.artist,.shop-details,.shop-details.single-print{grid-template-columns:1fr}
+  .shop-images,.two-col,.sketch-grid{grid-template-columns:1fr}
+  .rule{margin:3rem 0 2rem}
+  .full-bleed img{height:55vh}
+}
+
+@media(prefers-reduced-motion:reduce){
+  header,nav a::after,.hamburger span{transition:none}
+}
+
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
