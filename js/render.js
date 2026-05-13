@@ -68,7 +68,7 @@ const render = c => `
     <div class="rule"><span id="collector-heading">The collector</span></div>
     <div class="collector">
       <div>
-        ${img({ src: c.collector.paintingsImage, alt: c.collector.paintingsAlt, w: 900, h: 1200, sizes: '(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px', style: 'width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top' })}
+        ${img({ src: c.collector.paintingsImage, alt: c.collector.paintingsAlt, w: 900, h: 1200, sizes: '(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px', style: 'width:100%;object-fit:contain;background:var(--paper)' })}
         <p class="small-cap">${c.collector.paintingsCaption}</p>
         <div style="height:2rem"></div>
         ${img({ src: c.collector.portraitImage, alt: c.collector.portraitAlt, w: 900, h: 1200, sizes: '(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px', style: 'width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%' })}
