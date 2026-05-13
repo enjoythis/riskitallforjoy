@@ -7,13 +7,12 @@ const srcset = (base, nativeW) => {
 };
 
 const img = ({ src, alt, w, h, sizes, priority = false, style = '' }) => {
-  const native = w;
   return `<img
     src="${src}"
-    srcset="${srcset(src, native)}"
+    srcset="${srcset(src, w)}"
     sizes="${sizes}"
     alt="${alt}"
-    width="${w}" height="${h}"
+    width="${w}"${h ? ` height="${h}"` : ''}
     ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}
     ${style ? `style="${style}"` : ''}
   />`;
@@ -22,8 +21,8 @@ const img = ({ src, alt, w, h, sizes, priority = false, style = '' }) => {
 const printCard = p => `
   <article class="print-section" aria-label="${p.title}">
     <div class="shop-images">
-      ${img({ src: p.printImage, alt: p.printImageAlt, w: 900, h: 1119, sizes: '(max-width:760px) 100vw, (max-width:900px) 50vw, 450px' })}
-      ${img({ src: p.scaleImage, alt: p.scaleImageAlt, w: 900, h: 674, sizes: '(max-width:760px) 100vw, (max-width:900px) 50vw, 450px', style: 'aspect-ratio:unset' })}
+      ${img({ src: p.printImage, alt: p.printImageAlt, w: 900, sizes: '(max-width:760px) 100vw, (max-width:900px) 50vw, 450px' })}
+      ${img({ src: p.scaleImage, alt: p.scaleImageAlt, w: 900, sizes: '(max-width:760px) 100vw, (max-width:900px) 50vw, 450px', style: 'width:100%;height:60vw;max-height:500px;object-fit:cover' })}
     </div>
     <p class="scale-note">${p.scaleNote}</p>
     <div class="shop-details single-print">
@@ -68,7 +67,7 @@ const render = c => `
     <div class="rule"><span id="collector-heading">The collector</span></div>
     <div class="collector">
       <div>
-        ${img({ src: c.collector.paintingsImage, alt: c.collector.paintingsAlt, w: 900, h: 1200, sizes: '(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px', style: 'width:100%;object-fit:contain;background:var(--paper)' })}
+        ${img({ src: c.collector.paintingsImage, alt: c.collector.paintingsAlt, w: 900, sizes: '(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px' })}
         <p class="small-cap">${c.collector.paintingsCaption}</p>
         <div style="height:2rem"></div>
         ${img({ src: c.collector.portraitImage, alt: c.collector.portraitAlt, w: 900, h: 1200, sizes: '(max-width:760px) 100vw, (max-width:1200px) 60vw, 720px', style: 'width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%' })}
@@ -141,7 +140,7 @@ const render = c => `
     <div class="rule"><span>Sketchbook &amp; studies</span></div>
     <div style="padding-bottom:5rem">
       <div class="sketch-grid">
-        ${c.studio.sketches.map(s => img({ src: s.image, alt: s.alt, w: 700, h: 1000, sizes: '(max-width:760px) 100vw, 33vw' })).join('\n        ')}
+        ${c.studio.sketches.map(s => img({ src: s.image, alt: s.alt, w: 700, sizes: '(max-width:760px) 100vw, 33vw' })).join('\n        ')}
       </div>
     </div>
   </section>
