@@ -19,28 +19,41 @@ const img = ({ src, alt, w, h, sizes, priority = false, style = '' }) => {
 };
 
 const printCard = p => `
-  <article class="print-section" aria-label="${p.title}">
-    <div class="shop-images">
-      ${img({ src: p.printImage, alt: p.printImageAlt, w: 900, sizes: '(max-width:760px) 100vw, (max-width:900px) 50vw, 450px' })}
-      ${img({ src: p.scaleImage, alt: p.scaleImageAlt, w: 900, sizes: '(max-width:760px) 100vw, (max-width:900px) 50vw, 450px', style: 'width:100%;height:60vw;max-height:500px;object-fit:cover' })}
-    </div>
-    <p class="scale-note">${p.scaleNote}</p>
-    <div class="shop-details single-print">
-      <div class="print-card">
-        <p class="s-title">${p.fullTitle}</p>
-        <p class="s-ed">${p.edition}</p>
-        <div class="purchase-option">
-          <p class="s-price">${p.framedPrice}</p>
-          <dl><div class="mrow"><dt>Format</dt><dd>${p.framedFormat}</dd></div></dl>
-          <button class="s-add">Buy framed print</button>
+  <article class="print-section"
+    data-framed-price="${p.framedPrice}"
+    data-unframed-price="${p.unframedPrice}"
+    data-framed-format="${p.framedFormat}"
+    data-unframed-format="${p.unframedFormat}"
+    aria-label="${p.title}">
+    <div class="print-layout">
+      <div class="print-images">
+        ${img({ src: p.printImage, alt: p.printImageAlt, w: 900, sizes: '(max-width:760px) 100vw, 50vw', style: 'width:100%;height:auto' })}
+        <div class="print-scale-wrap">
+          ${img({ src: p.scaleImage, alt: p.scaleImageAlt, w: 900, sizes: '(max-width:760px) 100vw, 50vw' })}
+          <p class="print-scale-caption">${p.scaleNote}</p>
         </div>
-        <div class="purchase-option">
-          <p class="s-price">${p.unframedPrice}</p>
-          <dl><div class="mrow"><dt>Format</dt><dd>${p.unframedFormat}</dd></div></dl>
-          <button class="s-add">Buy unframed print</button>
+      </div>
+      <div class="print-panel">
+        <p class="print-panel-ed">${p.edition}</p>
+        <h3 class="print-panel-title">${p.title}</h3>
+        <div class="format-toggle" role="group" aria-label="Choose format">
+          <label class="format-opt">
+            <input type="radio" name="format-${p.id}" value="framed" checked/>
+            <span class="format-opt-inner">
+              <span class="format-opt-label">Framed</span>
+              <span class="format-opt-price">${p.framedPrice}</span>
+            </span>
+          </label>
+          <label class="format-opt">
+            <input type="radio" name="format-${p.id}" value="unframed"/>
+            <span class="format-opt-inner">
+              <span class="format-opt-label">Unframed</span>
+              <span class="format-opt-price">${p.unframedPrice}</span>
+            </span>
+          </label>
         </div>
-        <hr class="thin"/>
-        <dl>
+        <p class="format-desc">${p.framedFormat}</p>
+        <dl class="print-specs">
           <div class="mrow"><dt>Size</dt><dd>${p.size}</dd></div>
           <div class="mrow"><dt>Paper</dt><dd>${p.paper}</dd></div>
           <div class="mrow"><dt>Print</dt><dd>${p.print}</dd></div>
@@ -48,7 +61,8 @@ const printCard = p => `
           <div class="mrow"><dt>Dispatch</dt><dd>${p.dispatch}</dd></div>
           <div class="mrow"><dt>Shipping</dt><dd>${p.shipping}</dd></div>
         </dl>
-        <p class="s-note">${p.note}</p>
+        <button class="print-cta">Buy framed — ${p.framedPrice}</button>
+        <p class="print-note">${p.note}</p>
       </div>
     </div>
   </article>`;
@@ -163,4 +177,19 @@ fetch('./content.json')
   .then(r => r.json())
   .then(c => {
     document.getElementById('site-main').innerHTML = render(c);
+    initFormatToggles();
   });
+
+function initFormatToggles() {
+  document.querySelectorAll('.format-toggle').forEach(toggle => {
+    const article = toggle.closest('article');
+    toggle.addEventListener('change', e => {
+      const framed = e.target.value === 'framed';
+      const price = framed ? article.dataset.framedPrice : article.dataset.unframedPrice;
+      const format = framed ? article.dataset.framedFormat : article.dataset.unframedFormat;
+      const label = framed ? 'framed' : 'unframed';
+      article.querySelector('.format-desc').textContent = format;
+      article.querySelector('.print-cta').textContent = `Buy ${label} — ${price}`;
+    });
+  });
+}
