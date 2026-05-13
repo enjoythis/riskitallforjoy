@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "image": "images/hero-paintings.jpg",
+    "alt": "All of Your Colours and Joyspace (1) by Mousumi Saha"
+  },
+  "intro": {
+    "text": "We believe a collector is someone who saw a piece of art and just <em>knew</em>. These large scale art prints are made from the original paintings and produced at a size that holds a room. Here we share the story of the person who chose it first and make 100 limited edition prints available to own."
+  },
+  "collector": {
+    "paintingsImage": "images/collector-paintings.jpg",
+    "paintingsAlt": "All of Your Colours and Joyspace (1)",
+    "paintingsCaption": "All of Your Colours and Joyspace (1)",
+    "portraitImage": "images/collector-karen-lee.jpg",
+    "portraitAlt": "Karen Lee at home with the paintings",
+    "portraitCaption": "Karen Lee at home with the paintings",
+    "name": "Karen Lee",
+    "qa": [
+      {
+        "question": "Q — What made you want to live with this work?",
+        "answer": "I saw it at the opening and couldn't stop looking at it. It wasn't one thing — it was the colour, but also the writing in the paint. Something about having words inside a painting felt like a secret I was being let in on."
+      },
+      {
+        "question": "Q — Has the painting changed for you over time?",
+        "answer": "Every morning it's slightly different depending on the light. Some days it feels almost quiet. Other days it's extremely loud — and I mean that in the best possible way. I don't think I've finished looking at it yet."
+      },
+      {
+        "question": "Q — What would you say to someone considering a print?",
+        "answer": "That the energy comes through. I know that sounds like something a person just says. But something of the original feeling stays in. The scale, the looseness — it doesn't shrink the way you'd expect. I'd say trust it."
+      }
+    ]
+  },
+  "artist": {
+    "image": "images/artist-mousumi-saha.jpg",
+    "imageAlt": "Mousumi Saha",
+    "imageCaption": "Mousumi Saha",
+    "name": "Mousumi Saha",
+    "shortBio": "Mo Saha (b.1980) is a painter born in Middlesbrough, made in London and has recently relocated her studio to Portugal. Her journey from portraiture to contemporary landscape and flower painting reflects a quest for insight, beauty and joy.",
+    "bodyParagraphs": [
+      "Inspired by recent encounters with flora and the natural world and personal life events, Saha delights in a quest to create brief moments of sanctuary and lightness to counter the heaviness that will on occasion pervade our lives. In contrast to Saha's formal training in drawing portraits from life, she revels in the unpredictability, imperfection and spontaneity of spray paint, drips and splashes, all of which are whole-heartedly embraced. The classical limited palette and canvas grounds have also been replaced by baby blues, cotton candy and neon pinks, reminiscent of carefree childhood states, before the notion of 'taste' has kicked in. Saha beckons viewers into a realm brimming with innocence, and boundless joy.",
+      "Rose symbolism has existed as a metaphor for cosmic consciousness since the birth of world religions from Sufism and Hinduism to Christianity. The suspension of the flowers in a dream-like sky create a certain dimension of divinity which the painter felt was encapsulated in the poem 'The Sick-Bed' by Rabindranath Tagore. The painter's recent experiences of health issues herself and in her family have further defined that her biggest source of delight over despair has been witnessing simple moments of life force in action, primarily in the close observation of flowers in bloom. The artist also unashamedly embraces the decorative, romantic and feminine associations the rose evokes — a motif ever present in chintzy wallpaper and Rococo-inspired show plates.",
+      "At the heart of the exhibition lies a profound invitation: to rediscover the simple pleasures of existence and embrace the transformative power of art. As Saha explains, \"I refer to these paintings as 'joyspaces' — a state I generate for myself through my studio practice. It is my wish that people who see this work find and create their own joyspace, fostering moments of genuine joy and insight. I have come to know that to reach those states often requires an element of risk or jeopardy. It can be scary yet exhilarating.\""
+    ],
+    "quote": "\"I can only gaze and see / in the sky / the spreading layers / of a vast, radiant, petal'd rose\"",
+    "quoteAttrib": "— Rabindranath Tagore, 'The Sick Bed'"
+  },
+  "exhibition": {
+    "galleryWindowImage": "images/exhibition-gallery-window.jpg",
+    "galleryWindowAlt": "VFD Outsiders Gallery window",
+    "openingNightImage": "images/exhibition-opening-night.jpg",
+    "openingNightAlt": "Opening night, VFD Outsiders",
+    "installationImage": "images/exhibition-installation.png",
+    "installationAlt": "Installation view, VFD Outsiders",
+    "galleristText": "Evening Standard has described Lyall as 'Creative Director, Designer, owner of VFD and fairy godperson to the LGBTQ+ scene'. VFD is a club, art space and 'crazy bubble of acceptance' in the former leather works. Hakaraia and VFD have supported queer creatives including artists, DJs, designers, performers, filmmakers, promoters and community makers since 2008.",
+    "galleristUrl": "https://www.lyallhakaraia.com",
+    "venueName": "VFD Outsiders Gallery",
+    "venueAddress": "64 Stoke Newington Rd, London N16 7XB",
+    "venuecurator": "Lyall Hakaraia",
+    "venueDates": "14th June – 19th July 2024",
+    "venueEmail": "info@vfdalston.com"
+  },
+  "studio": {
+    "paintingsImage": "images/studio-paintings.jpg",
+    "paintingsAlt": "Paintings in the studio",
+    "wipImage": "images/studio-work-in-progress.jpg",
+    "wipAlt": "Work in progress",
+    "sketches": [
+      { "image": "images/sketch-pencil-study.jpg", "alt": "Pencil study" },
+      { "image": "images/sketch-oil-study.jpg", "alt": "Oil study" },
+      { "image": "images/sketch-rose-study.jpg", "alt": "Rose study" }
+    ]
+  },
+  "prints": [
+    {
+      "id": "joyspace-1",
+      "title": "Joyspace (1)",
+      "fullTitle": "Mousumi Saha — Joyspace (1)",
+      "edition": "Fine art giclée print · Edition of 100",
+      "printImage": "images/print-joyspace-1.jpg",
+      "printImageAlt": "Joyspace (1) print",
+      "scaleImage": "images/print-joyspace-1-scale.jpg",
+      "scaleImageAlt": "Joyspace (1) shown at scale",
+      "scaleNote": "Edition printed at bespoke size (762 × 948 mm) — differs from original artwork shown in collector's home",
+      "framedPrice": "£650",
+      "framedFormat": "White tray frame with D-rings and cord for hanging",
+      "unframedPrice": "£350",
+      "unframedFormat": "Unframed print only, rolled in protective tube",
+      "size": "762 × 948 mm",
+      "paper": "Hahnemühle Photo Rag 310gsm",
+      "print": "Giclée archival pigment inks",
+      "certificate": "Certificate of authenticity included",
+      "dispatch": "Tracked, 5–7 working days (UK)",
+      "shipping": "Calculated at checkout",
+      "note": "Produced to order. No returns on fine art prints unless damaged in transit."
+    },
+    {
+      "id": "all-colours",
+      "title": "All of your colours",
+      "fullTitle": "Mousumi Saha — All of your colours",
+      "edition": "Fine art giclée print · Edition of 100",
+      "printImage": "images/print-all-colours.jpg",
+      "printImageAlt": "All of your colours print",
+      "scaleImage": "images/print-all-colours-scale.png",
+      "scaleImageAlt": "All of your colours shown at scale",
+      "scaleNote": "Edition printed at bespoke size (762 × 953 mm) — differs from original artwork shown in collector's home",
+      "framedPrice": "£650",
+      "framedFormat": "White tray frame with D-rings and cord for hanging",
+      "unframedPrice": "£350",
+      "unframedFormat": "Unframed print only, rolled in protective tube",
+      "size": "762 × 953 mm",
+      "paper": "Hahnemühle Photo Rag 310gsm",
+      "print": "Giclée archival pigment inks",
+      "certificate": "Certificate of authenticity included",
+      "dispatch": "Tracked, 5–7 working days (UK)",
+      "shipping": "Calculated at checkout",
+      "note": "Produced to order. No returns on fine art prints unless damaged in transit."
+    }
+  ]
+}

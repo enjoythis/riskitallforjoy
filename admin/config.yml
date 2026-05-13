@@ -1,0 +1,139 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://gilded-moonbeam-787036.netlify.app
+display_url: https://gilded-moonbeam-787036.netlify.app
+
+media_folder: images
+public_folder: images
+
+collections:
+  - name: content
+    label: Site Content
+    files:
+
+      - name: hero
+        label: Hero
+        file: content.json
+        fields:
+          - label: Hero Image
+            name: hero
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Alt text, name: alt, widget: string }
+
+      - name: intro
+        label: Intro Text
+        file: content.json
+        fields:
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - { label: Text, name: text, widget: text }
+
+      - name: collector
+        label: The Collector
+        file: content.json
+        fields:
+          - label: Collector
+            name: collector
+            widget: object
+            fields:
+              - { label: Paintings image, name: paintingsImage, widget: image }
+              - { label: Paintings caption, name: paintingsCaption, widget: string }
+              - { label: Portrait image, name: portraitImage, widget: image }
+              - { label: Portrait caption, name: portraitCaption, widget: string }
+              - { label: Collector name, name: name, widget: string }
+              - label: Q&A
+                name: qa
+                widget: list
+                fields:
+                  - { label: Question, name: question, widget: string }
+                  - { label: Answer, name: answer, widget: text }
+
+      - name: artist
+        label: The Artist
+        file: content.json
+        fields:
+          - label: Artist
+            name: artist
+            widget: object
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo caption, name: imageCaption, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Short bio, name: shortBio, widget: text }
+              - label: Body paragraphs
+                name: bodyParagraphs
+                widget: list
+                field: { label: Paragraph, name: paragraph, widget: text }
+              - { label: Pull quote, name: quote, widget: text }
+              - { label: Quote attribution, name: quoteAttrib, widget: string }
+
+      - name: exhibition
+        label: The Exhibition
+        file: content.json
+        fields:
+          - label: Exhibition
+            name: exhibition
+            widget: object
+            fields:
+              - { label: Gallery window image, name: galleryWindowImage, widget: image }
+              - { label: Opening night image, name: openingNightImage, widget: image }
+              - { label: Installation view image, name: installationImage, widget: image }
+              - { label: Gallerist text, name: galleristText, widget: text }
+              - { label: Gallerist website URL, name: galleristUrl, widget: string }
+              - { label: Venue name, name: venueName, widget: string }
+              - { label: Venue address, name: venueAddress, widget: string }
+              - { label: Curator, name: venuecurator, widget: string }
+              - { label: Dates, name: venueDates, widget: string }
+              - { label: Venue email, name: venueEmail, widget: string }
+
+      - name: studio
+        label: Studio
+        file: content.json
+        fields:
+          - label: Studio
+            name: studio
+            widget: object
+            fields:
+              - { label: Studio paintings image, name: paintingsImage, widget: image }
+              - { label: Work in progress image, name: wipImage, widget: image }
+              - label: Sketchbook images
+                name: sketches
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Alt text, name: alt, widget: string }
+
+      - name: prints
+        label: Prints
+        file: content.json
+        fields:
+          - label: Prints
+            name: prints
+            widget: list
+            fields:
+              - { label: ID (no spaces), name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Full title (with artist name), name: fullTitle, widget: string }
+              - { label: Edition text, name: edition, widget: string }
+              - { label: Print image, name: printImage, widget: image }
+              - { label: Print image alt, name: printImageAlt, widget: string }
+              - { label: Scale image, name: scaleImage, widget: image }
+              - { label: Scale image alt, name: scaleImageAlt, widget: string }
+              - { label: Scale note, name: scaleNote, widget: string }
+              - { label: Framed price, name: framedPrice, widget: string }
+              - { label: Framed format description, name: framedFormat, widget: string }
+              - { label: Unframed price, name: unframedPrice, widget: string }
+              - { label: Unframed format description, name: unframedFormat, widget: string }
+              - { label: Size, name: size, widget: string }
+              - { label: Paper, name: paper, widget: string }
+              - { label: Print process, name: print, widget: string }
+              - { label: Certificate, name: certificate, widget: string }
+              - { label: Dispatch, name: dispatch, widget: string }
+              - { label: Shipping, name: shipping, widget: string }
+              - { label: Footer note, name: note, widget: text }
