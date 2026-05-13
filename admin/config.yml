@@ -14,10 +14,10 @@ collections:
     files:
 
       - name: hero
-        label: Hero
+        label: Hero image
         file: content.json
         fields:
-          - label: Hero Image
+          - label: Hero
             name: hero
             widget: object
             fields:
@@ -25,7 +25,7 @@ collections:
               - { label: Alt text, name: alt, widget: string }
 
       - name: intro
-        label: Intro Text
+        label: Intro paragraph
         file: content.json
         fields:
           - label: Intro
@@ -34,28 +34,30 @@ collections:
             fields:
               - { label: Text, name: text, widget: text }
 
-      - name: collector
-        label: The Collector
+      - name: collector_photos
+        label: "Collector — photos & name"
         file: content.json
         fields:
           - label: Collector
             name: collector
             widget: object
             fields:
+              - { label: Collector name, name: name, widget: string }
               - { label: Paintings image, name: paintingsImage, widget: image }
               - { label: Paintings caption, name: paintingsCaption, widget: string }
-              - { label: Portrait image, name: portraitImage, widget: image }
+              - { label: Portrait photo, name: portraitImage, widget: image }
               - { label: Portrait caption, name: portraitCaption, widget: string }
-              - { label: Collector name, name: name, widget: string }
-              - label: Q&A
+              - label: "Interview Q&A"
                 name: qa
                 widget: list
+                label_singular: question
+                summary: "{{fields.question}}"
                 fields:
                   - { label: Question, name: question, widget: string }
                   - { label: Answer, name: answer, widget: text }
 
       - name: artist
-        label: The Artist
+        label: The artist
         file: content.json
         fields:
           - label: Artist
@@ -65,16 +67,17 @@ collections:
               - { label: Photo, name: image, widget: image }
               - { label: Photo caption, name: imageCaption, widget: string }
               - { label: Name, name: name, widget: string }
-              - { label: Short bio, name: shortBio, widget: text }
+              - { label: Short bio (sidebar), name: shortBio, widget: text }
               - label: Body paragraphs
                 name: bodyParagraphs
                 widget: list
+                label_singular: paragraph
                 field: { label: Paragraph, name: paragraph, widget: text }
               - { label: Pull quote, name: quote, widget: text }
               - { label: Quote attribution, name: quoteAttrib, widget: string }
 
       - name: exhibition
-        label: The Exhibition
+        label: The exhibition
         file: content.json
         fields:
           - label: Exhibition
@@ -105,30 +108,34 @@ collections:
               - label: Sketchbook images
                 name: sketches
                 widget: list
+                label_singular: sketch
+                summary: "{{fields.alt}}"
                 fields:
                   - { label: Image, name: image, widget: image }
-                  - { label: Alt text, name: alt, widget: string }
+                  - { label: Caption, name: alt, widget: string }
 
       - name: prints
-        label: Prints
+        label: Prints for sale
         file: content.json
         fields:
           - label: Prints
             name: prints
             widget: list
+            label_singular: print
+            summary: "{{fields.title}}"
             fields:
               - { label: ID (no spaces), name: id, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Full title (with artist name), name: fullTitle, widget: string }
               - { label: Edition text, name: edition, widget: string }
               - { label: Print image, name: printImage, widget: image }
-              - { label: Print image alt, name: printImageAlt, widget: string }
-              - { label: Scale image, name: scaleImage, widget: image }
-              - { label: Scale image alt, name: scaleImageAlt, widget: string }
-              - { label: Scale note, name: scaleNote, widget: string }
-              - { label: Framed price, name: framedPrice, widget: string }
+              - { label: Print image alt text, name: printImageAlt, widget: string }
+              - { label: Scale/in-room image, name: scaleImage, widget: image }
+              - { label: Scale image alt text, name: scaleImageAlt, widget: string }
+              - { label: Scale note (shown under image), name: scaleNote, widget: string }
+              - { label: Framed price (e.g. £650), name: framedPrice, widget: string }
               - { label: Framed format description, name: framedFormat, widget: string }
-              - { label: Unframed price, name: unframedPrice, widget: string }
+              - { label: Unframed price (e.g. £350), name: unframedPrice, widget: string }
               - { label: Unframed format description, name: unframedFormat, widget: string }
               - { label: Size, name: size, widget: string }
               - { label: Paper, name: paper, widget: string }
