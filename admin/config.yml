@@ -9,10 +9,10 @@ media_folder: images
 public_folder: images
 
 collections:
-  - name: content
-    label: Site Content
-    files:
 
+  - name: hero
+    label: "① Hero image"
+    files:
       - name: hero
         label: Hero image
         file: content.json
@@ -24,6 +24,9 @@ collections:
               - { label: Image, name: image, widget: image }
               - { label: Alt text, name: alt, widget: string }
 
+  - name: intro
+    label: "② Intro paragraph"
+    files:
       - name: intro
         label: Intro paragraph
         file: content.json
@@ -34,8 +37,11 @@ collections:
             fields:
               - { label: Text, name: text, widget: text }
 
-      - name: collector_photos
-        label: "Collector — photos & name"
+  - name: collector
+    label: "③ The Collector"
+    files:
+      - name: collector
+        label: The Collector
         file: content.json
         fields:
           - label: Collector
@@ -56,8 +62,11 @@ collections:
                   - { label: Question, name: question, widget: string }
                   - { label: Answer, name: answer, widget: text }
 
+  - name: artist
+    label: "④ The Artist"
+    files:
       - name: artist
-        label: The artist
+        label: The Artist
         file: content.json
         fields:
           - label: Artist
@@ -76,8 +85,11 @@ collections:
               - { label: Pull quote, name: quote, widget: text }
               - { label: Quote attribution, name: quoteAttrib, widget: string }
 
+  - name: exhibition
+    label: "⑤ The Exhibition"
+    files:
       - name: exhibition
-        label: The exhibition
+        label: The Exhibition
         file: content.json
         fields:
           - label: Exhibition
@@ -95,6 +107,9 @@ collections:
               - { label: Dates, name: venueDates, widget: string }
               - { label: Venue email, name: venueEmail, widget: string }
 
+  - name: studio
+    label: "⑥ Studio"
+    files:
       - name: studio
         label: Studio
         file: content.json
@@ -114,6 +129,9 @@ collections:
                   - { label: Image, name: image, widget: image }
                   - { label: Caption, name: alt, widget: string }
 
+  - name: prints
+    label: "⑦ Prints for sale"
+    files:
       - name: prints
         label: Prints for sale
         file: content.json
