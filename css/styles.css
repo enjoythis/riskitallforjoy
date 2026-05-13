@@ -129,6 +129,7 @@ footer{border-top:.5px solid var(--rule);padding:2rem 2.5rem;display:flex;justif
 .shop-details.single-print{grid-template-columns:minmax(0,1fr);max-width:520px;margin:0 auto}
 
 @media(max-width:760px){
+  .hero{min-height:unset}
   .collector,.artist,.shop-details,.shop-details.single-print{grid-template-columns:1fr}
   .shop-images,.two-col,.sketch-grid{grid-template-columns:1fr}
   .rule{margin:3rem 0 2rem}
