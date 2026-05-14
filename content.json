@@ -16,16 +16,16 @@
     "name": "Karen Lee",
     "qa": [
       {
-        "question": "Q — What made you want to live with this work?",
-        "answer": "I saw it at the opening and couldn't stop looking at it. It wasn't one thing — it was the colour, but also the writing in the paint. Something about having words inside a painting felt like a secret I was being let in on."
+        "question": "How did it feel when you connected with the pieces?",
+        "answer": "It felt like very easy, happy synchronicity. I was in London for a few days, which coincided with Mo's exhibition. I loved the title, Risk it all for Joy, as a reminder of how important it is to create joy spaces, especially as I was redecorating and renovating at the time. I didn't go with the intention of buying, but wandering around her pieces, I felt this pull towards the two largest works. Realising they were still available, and that they were the perfect size for my Lisbon walls, it just felt…."
       },
       {
-        "question": "Q — Has the painting changed for you over time?",
-        "answer": "Every morning it's slightly different depending on the light. Some days it feels almost quiet. Other days it's extremely loud — and I mean that in the best possible way. I don't think I've finished looking at it yet."
+        "question": "How is it living with the pieces?",
+        "answer": "They're in my living room, so I see them every day and spend a lot of time looking closely at them. Often it's while I'm sitting on my yoga mat, and I notice how the sunlight reflects different colours and shows up the textures in the paint.\n\nThere's an extra connection because Mo is a friend. I see what she puts of herself into the canvas, and that draws me in even more. I love how she described this period of painting as one \"to rediscover the simple pleasures of existence and embrace the transformative power of art.\" For me, the paintings reflect that energy, and the long, continuing process we are all on. I have been tuning into these deep, hidden parts of me for a while, to find that joy, lightness and freedom. Her pieces perfectly capture the hope and faith I have in this exploration, and I can't think of a better talisman to have in my home and sanctuary."
       },
       {
-        "question": "Q — What would you say to someone considering a print?",
-        "answer": "That the energy comes through. I know that sounds like something a person just says. But something of the original feeling stays in. The scale, the looseness — it doesn't shrink the way you'd expect. I'd say trust it."
+        "question": "Tell us a bit about what you're up to at the moment.",
+        "answer": "I'm at an exciting point in my life. My consulting business, working with early-stage founders and entrepreneurs across climate and health tech and the arts, is taking off and giving me both joy and stability, a precarious and elusive state that I'm enjoying while it lasts.\n\nHome is Lisbon and London, and I feed off the energies of these two very different cities. In Lisbon especially, the wild, salty Atlantic air energises me. The artists I'm most inspired by are the ones who put all of themselves into what they're doing, and it reflects back at you and makes you wonder: how much of myself am I putting into what I do, what am I holding back and why? I'm gently putting this into practice myself through ceramics, surfing and music, and enjoying the process of what develops."
       }
     ]
   },
@@ -44,19 +44,19 @@
     "quoteAttrib": "— Rabindranath Tagore, 'The Sick Bed'"
   },
   "exhibition": {
-    "galleryWindowImage": "images/exhibition-gallery-window.jpg",
-    "galleryWindowAlt": "VFD Outsiders Gallery window",
-    "openingNightImage": "images/exhibition-opening-night.jpg",
-    "openingNightAlt": "Opening night, VFD Outsiders",
     "installationImage": "images/exhibition-installation.png",
+    "venueAddress": "64 Stoke Newington Rd, London N16 7XB",
+    "galleryWindowAlt": "VFD Outsiders Gallery window",
+    "venuecurator": "Lyall Hakaraia",
+    "openingNightAlt": "Opening night, VFD Outsiders",
+    "galleristUrl": "https://www.lyallhakaraia.com",
+    "venueEmail": "info@vfdalston.com",
     "installationAlt": "Installation view, VFD Outsiders",
     "galleristText": "Evening Standard has described Lyall as 'Creative Director, Designer, owner of VFD and fairy godperson to the LGBTQ+ scene'. VFD is a club, art space and 'crazy bubble of acceptance' in the former leather works. Hakaraia and VFD have supported queer creatives including artists, DJs, designers, performers, filmmakers, promoters and community makers since 2008.",
-    "galleristUrl": "https://www.lyallhakaraia.com",
-    "venueName": "VFD Outsiders Gallery",
-    "venueAddress": "64 Stoke Newington Rd, London N16 7XB",
-    "venuecurator": "Lyall Hakaraia",
     "venueDates": "14th June – 19th July 2024",
-    "venueEmail": "info@vfdalston.com"
+    "galleryWindowImage": "images/exhibition-gallery-window.jpg",
+    "venueName": "VFD Outsiders Gallery",
+    "openingNightImage": "images/exhibition-opening-night.jpg"
   },
   "studio": {
     "paintingsImage": "images/studio-paintings.jpg",
@@ -64,55 +64,64 @@
     "wipImage": "images/studio-work-in-progress.jpg",
     "wipAlt": "Work in progress",
     "sketches": [
-      { "image": "images/sketch-pencil-study.jpg", "alt": "Pencil study" },
-      { "image": "images/sketch-oil-study.jpg", "alt": "Oil study" },
-      { "image": "images/sketch-rose-study.jpg", "alt": "Rose study" }
+      {
+        "image": "images/sketch-pencil-study.jpg",
+        "alt": "Pencil study"
+      },
+      {
+        "image": "images/sketch-oil-study.jpg",
+        "alt": "Oil study"
+      },
+      {
+        "image": "images/sketch-rose-study.jpg",
+        "alt": "Rose study"
+      }
     ]
   },
   "prints": [
     {
-      "id": "joyspace-1",
-      "title": "Joyspace (1)",
-      "fullTitle": "Mousumi Saha — Joyspace (1)",
-      "edition": "Fine art giclée print · Edition of 100",
-      "printImage": "images/print-joyspace-1.jpg",
-      "printImageAlt": "Joyspace (1) print",
-      "scaleImage": "images/print-joyspace-1-scale.jpg",
-      "scaleImageAlt": "Joyspace (1) shown at scale",
-      "scaleNote": "Edition printed at bespoke size (762 × 948 mm) — differs from original artwork shown in collector's home",
-      "framedPrice": "£650",
-      "framedFormat": "White tray frame with D-rings and cord for hanging",
-      "unframedPrice": "£350",
-      "unframedFormat": "Unframed print only, rolled in protective tube",
       "size": "762 × 948 mm",
+      "unframedFormat": "Unframed print only, rolled in protective tube",
+      "fullTitle": "Mousumi Saha — Joyspace (1)",
       "paper": "Hahnemühle Photo Rag 310gsm",
       "print": "Giclée archival pigment inks",
-      "certificate": "Certificate of authenticity included",
-      "dispatch": "Tracked, 5–7 working days (UK)",
       "shipping": "Calculated at checkout",
-      "note": "Produced to order. No returns on fine art prints unless damaged in transit."
+      "printImage": "images/print-joyspace-1.jpg",
+      "framedFormat": "White tray frame with D-rings and cord for hanging",
+      "scaleImage": "images/print-joyspace-1-scale.jpg",
+      "framedPrice": "£650",
+      "note": "Produced to order. No returns on fine art prints unless damaged in transit.",
+      "certificate": "Certificate of authenticity included",
+      "scaleImageAlt": "Joyspace (1) shown at scale",
+      "title": "Joyspace (1)",
+      "unframedPrice": "£350",
+      "dispatch": "Tracked, 5–7 working days (UK)",
+      "printImageAlt": "Joyspace (1) print",
+      "id": "joyspace-1",
+      "scaleNote": "Edition printed at bespoke size (762 × 948 mm) — differs from original artwork shown in collector's home",
+      "edition": "Fine art giclée print · Edition of 100"
     },
     {
-      "id": "all-colours",
-      "title": "All of your colours",
-      "fullTitle": "Mousumi Saha — All of your colours",
-      "edition": "Fine art giclée print · Edition of 100",
-      "printImage": "images/print-all-colours.jpg",
-      "printImageAlt": "All of your colours print",
-      "scaleImage": "images/print-all-colours-scale.png",
-      "scaleImageAlt": "All of your colours shown at scale",
-      "scaleNote": "Edition printed at bespoke size (762 × 953 mm) — differs from original artwork shown in collector's home",
-      "framedPrice": "£650",
-      "framedFormat": "White tray frame with D-rings and cord for hanging",
-      "unframedPrice": "£350",
-      "unframedFormat": "Unframed print only, rolled in protective tube",
       "size": "762 × 953 mm",
+      "unframedFormat": "Unframed print only, rolled in protective tube",
+      "fullTitle": "Mousumi Saha — All of your colours",
       "paper": "Hahnemühle Photo Rag 310gsm",
       "print": "Giclée archival pigment inks",
-      "certificate": "Certificate of authenticity included",
-      "dispatch": "Tracked, 5–7 working days (UK)",
       "shipping": "Calculated at checkout",
-      "note": "Produced to order. No returns on fine art prints unless damaged in transit."
+      "printImage": "images/print-all-colours.jpg",
+      "framedFormat": "White tray frame with D-rings and cord for hanging",
+      "scaleImage": "images/print-all-colours-scale.png",
+      "framedPrice": "£650",
+      "note": "Produced to order. No returns on fine art prints unless damaged in transit.",
+      "certificate": "Certificate of authenticity included",
+      "scaleImageAlt": "All of your colours shown at scale",
+      "title": "All of your colours",
+      "unframedPrice": "£350",
+      "dispatch": "Tracked, 5–7 working days (UK)",
+      "printImageAlt": "All of your colours print",
+      "id": "all-colours",
+      "scaleNote": "Edition printed at bespoke size (762 × 953 mm) — differs from original artwork shown in collector's home",
+      "edition": "Fine art giclée print · Edition of 100"
     }
   ]
 }
