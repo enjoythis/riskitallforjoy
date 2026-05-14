@@ -59,21 +59,21 @@
     "openingNightImage": "images/exhibition-1-.jpg"
   },
   "studio": {
-    "paintingsImage": "images/studio-paintings.jpg",
+    "paintingsImage": "images/studio-roses-1-.jpg",
     "paintingsAlt": "Paintings in the studio",
-    "wipImage": "images/studio-work-in-progress.jpg",
+    "wipImage": "images/studio-rose.jpg",
     "wipAlt": "Work in progress",
     "sketches": [
       {
-        "image": "images/sketch-pencil-study.jpg",
+        "image": "images/rose-drawing.jpg",
         "alt": "Pencil study"
       },
       {
-        "image": "images/sketch-oil-study.jpg",
+        "image": "images/rose-study.jpg",
         "alt": "Oil study"
       },
       {
-        "image": "images/sketch-rose-study.jpg",
+        "image": "images/rosesketch.jpg",
         "alt": "Rose study"
       }
     ]
