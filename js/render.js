@@ -105,6 +105,9 @@ const render = c => `
         </div>`).join('')}
       </div>
     </div>
+    <div class="exh">
+      <blockquote>“I have been tuning into these deep, hidden parts of me for a while, to find that joy, lightness and freedom.”<cite>Karen Lee</cite></blockquote>
+    </div>
   </section>
 
   <!-- THE ARTIST -->
