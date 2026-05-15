@@ -13,7 +13,7 @@ nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:.5px;ba
 nav a[aria-current="true"]::after,nav a:hover::after{transform:scaleX(1)}
 nav a.cta{border:.5px solid var(--ink);padding:.4rem .9rem}
 nav a.cta::after{display:none}
-.cart-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:.5px solid var(--ink);background:transparent;padding:.4rem .9rem;cursor:pointer;white-space:nowrap}
+.cart-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:.5px solid var(--ink);background:transparent;padding:.4rem .9rem;cursor:pointer;white-space:nowrap;text-decoration:none;color:var(--ink)}
 
 /* HAMBURGER */
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
@@ -136,7 +136,7 @@ nav a.cta::after{display:none}
 .mrow dd{color:var(--ink);text-align:right}
 
 /* CTA */
-.print-cta{width:100%;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:none;padding:1.1rem;cursor:pointer}
+.print-cta{display:block;width:100%;box-sizing:border-box;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:none;padding:1.1rem;cursor:pointer;text-decoration:none;text-align:center}
 .print-note{font-size:9px;line-height:1.8;color:var(--muted);margin-top:1rem}
 
 .small-cap{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.75rem}
