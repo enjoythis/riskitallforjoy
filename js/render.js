@@ -106,7 +106,7 @@ const render = c => `
       </div>
     </div>
     <div class="exh">
-      <blockquote>"I have been tuning into these deep, hidden parts of me for a while, to find that joy, lightness and freedom."<cite>Karen Lee</cite></blockquote>
+      <blockquote>"I have been tuning into these deep, hidden parts of me for a while, to find that joy, lightness and freedom."<cite>Karen Lee, Collector</cite></blockquote>
     </div>
   </section>
 
