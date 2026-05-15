@@ -1,3 +1,9 @@
+const mailtoUrl = (email, title, label, price) => {
+  const subject = `Purchase enquiry: ${title} — ${label} (${price})`;
+  const body = `Hi,\n\nI'm interested in purchasing the following print from Risk it all for Joy:\n\nTitle: ${title}\nFormat: ${label}\nPrice: ${price}\n\nPlease let me know how to proceed.\n\nThank you`;
+  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 const srcset = (base, nativeW) => {
   const ext = base.match(/(\.[^.]+)$/)[1];
   const stem = base.replace(/\.[^.]+$/, '');
@@ -18,12 +24,14 @@ const img = ({ src, alt, w, h, sizes, priority = false, style = '' }) => {
   />`;
 };
 
-const printCard = p => `
+const printCard = (p, email) => `
   <article class="print-section"
     data-framed-price="${p.framedPrice}"
     data-unframed-price="${p.unframedPrice}"
     data-framed-format="${p.framedFormat}"
     data-unframed-format="${p.unframedFormat}"
+    data-email="${email}"
+    data-title="${p.title}"
     aria-label="${p.title}">
     <div class="print-layout">
       <div class="print-images">
@@ -61,7 +69,7 @@ const printCard = p => `
           <div class="mrow"><dt>Dispatch</dt><dd>${p.dispatch}</dd></div>
           <div class="mrow"><dt>Shipping</dt><dd>${p.shipping}</dd></div>
         </dl>
-        <button class="print-cta">Request Purchase Framed - ${p.framedPrice}</button>
+        <a class="print-cta" href="${mailtoUrl(email, p.title, 'Framed', p.framedPrice)}">Request Purchase Framed - ${p.framedPrice}</a>
         <p class="print-note">${p.note}</p>
       </div>
     </div>
@@ -168,7 +176,7 @@ const render = c => `
           <h2>Limited edition print series</h2>
           <p>Two fine art giclée editions from <em>Risk it all for Joy</em>, available framed and unframed. Each edition is printed at a bespoke size, distinct from the original artwork shown in the collector's home.</p>
         </div>
-        ${c.prints.map(printCard).join('')}
+        ${c.prints.map(p => printCard(p, c.exhibition.venueEmail)).join('')}
       </div>
     </div>
   </section>`;
@@ -188,8 +196,10 @@ function initFormatToggles() {
       const price = framed ? article.dataset.framedPrice : article.dataset.unframedPrice;
       const format = framed ? article.dataset.framedFormat : article.dataset.unframedFormat;
       const label = framed ? 'Framed' : 'Unframed';
+      const cta = article.querySelector('.print-cta');
       article.querySelector('.format-desc').textContent = format;
-      article.querySelector('.print-cta').textContent = `Request Purchase ${label} - ${price}`;
+      cta.textContent = `Request Purchase ${label} - ${price}`;
+      cta.href = mailtoUrl(article.dataset.email, article.dataset.title, label, price);
     });
   });
 }
