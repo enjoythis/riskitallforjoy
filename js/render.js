@@ -61,7 +61,7 @@ const printCard = p => `
           <div class="mrow"><dt>Dispatch</dt><dd>${p.dispatch}</dd></div>
           <div class="mrow"><dt>Shipping</dt><dd>${p.shipping}</dd></div>
         </dl>
-        <button class="print-cta">Buy framed — ${p.framedPrice}</button>
+        <button class="print-cta">Request Purchase Framed - ${p.framedPrice}</button>
         <p class="print-note">${p.note}</p>
       </div>
     </div>
@@ -187,9 +187,9 @@ function initFormatToggles() {
       const framed = e.target.value === 'framed';
       const price = framed ? article.dataset.framedPrice : article.dataset.unframedPrice;
       const format = framed ? article.dataset.framedFormat : article.dataset.unframedFormat;
-      const label = framed ? 'framed' : 'unframed';
+      const label = framed ? 'Framed' : 'Unframed';
       article.querySelector('.format-desc').textContent = format;
-      article.querySelector('.print-cta').textContent = `Buy ${label} — ${price}`;
+      article.querySelector('.print-cta').textContent = `Request Purchase ${label} - ${price}`;
     });
   });
 }
