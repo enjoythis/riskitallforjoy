@@ -1,7 +1,7 @@
 const mailtoUrl = (email, title, label, price) => {
   const subject = `Purchase enquiry: ${title} — ${label} (${price})`;
   const body = `Hi,\n\nI'm interested in purchasing the following print from Risk it all for Joy:\n\nTitle: ${title}\nFormat: ${label}\nPrice: ${price}\n\nPlease let me know how to proceed.\n\nThank you`;
-  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return `mailto:hellomosaha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 };
 
 const srcset = (base, nativeW) => {
