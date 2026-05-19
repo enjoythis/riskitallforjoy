@@ -103,6 +103,7 @@ const render = c => `
           <p class="q">${q.question}</p>
           <p class="a">${q.answer}</p>
         </div>`).join('')}
+        <p style="margin-top:2rem;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)"><a href="https://lightfuladvisory.com" style="color:var(--muted)">lightfuladvisory.com</a></p>
       </div>
     </div>
     <div class="exh">
