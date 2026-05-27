@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://riskitallforjoy.com/sitemap.xml
